@@ -1,0 +1,189 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>baitaptuan8</title>
+        <link rel="stylesheet" href="/baitaptuan8/css/baitaptuan8.css">
+        <link rel="stylesheet" href="/baitaptuan8/css/bootstrap.min.css">
+        <script src="/baitaptuan8/js/jquery-3.7.1.min.js"></script>
+        <script src="/baitaptuan8/js/bootstrap.min.js"></script>
+        <script src="/baitaptuan8/js/baitaptuan8.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src="/baitaptuan8/img/baitaptuan8.png" width="100%" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar">
+                    <ul class="nav nav-navbar nav-navexpand">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnDK">Đăng kí</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Trợ giúp</a></li> 
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <table class="table-bordered table-light table-primary table-hover table table-striped" id="tbDanhSach">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã học viên</th>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>Tiền dịch vụ</th>
+                        <th>Tiền đồ dùng</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>Trần Anh</td>
+                        <td>hongquan@iuh.edu.vn</td>
+                        <td>30000</td>
+                        <td>10000</td>
+                        <td>40000</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>THÔNG TIN THANH TOÁN</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="form">
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for=""> Mã học viên</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="text" class="form-control" placeholder="123456789" id="txtMa">
+                                        </div>
+                                        <div class="col-3 col-sm-3 p-2">
+                                            <span id="tbMa">*</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Họ tên</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="text" placeholder="Tran Thu Trang" class="form-control" id="txtHT">
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                            <span id="tbTen">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Email</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="text" placeholder="trangtran@iuh.edu.vn" class="form-control" id="txtDC">
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                            <span id="tbEmail">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Dịch vụ</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <select name="gia" id="slGia" class="form-control">
+                                                <option value="2000">Bơi</option>
+                                                <option value="3000">Trượt ván</option>
+                                                <option value="5000">Moto nước</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Giá tiền</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="text" id="txtDV" name="txtDV" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Đồ dùng</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="checkbox" class="chkDoDung"  name="chkDoDung" value="20000" > Áo quần bơi
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for=""></label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="checkbox" class="chkDoDung"  name="chkDoDung" value="50000" > Phao
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Tiền đồ dùng</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="text" class="form-control"  name="txtDD" id="txtDD"  disabled>
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group p-1">
+                                        <div class="col-3 col-sm-3">
+                                            <label for="">Tong tien</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6">
+                                            <input type="text" class="form-control"  name="txtTong" id="txtTong"  disabled>
+                                        </div>
+                                        <div class="col-3 col-sm-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6"><input type="button" value="Thanh toán" id="btnSave" class="btn btn-success btn-block"></div>
+                                        <div class="col-6 col-sm-6"><input type="button" value="Hủy" class="btn btn-danger btn-block"></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <h4>Trang thanh toán</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md-4">
+                        <h6>Mã sinh viên:____________________</h6>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <h6>Họ tên:____________________</h6>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <h6>Phòng thi:____________________</h6>
+                    </div>
+                </div>
+            </div>
+<<<<<<< HEAD
+        </div>
+=======
+        </div>
+    </body>
+    </html>
+>>>>>>> 0d825a80c10bb86af96b3d8de8975e8115a556b9

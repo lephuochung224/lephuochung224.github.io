@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/Baikiemtracuoiky/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Baikiemtracuoiky/css/index.css">
+    <script src="/Baikiemtracuoiky/js/jquery-3.7.1.min.js"></script>
+    <script src="/Baikiemtracuoiky/js/bootstrap.min.js"></script>
+    <script src="/Baikiemtracuoiky/js/index.js"></script>
+</head>
+
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-12">
+                <img src="/Baikiemtracuoiky/img/HEADER.PNG" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="navbar">
+                <ul class="nav nav-navbar nav-expand">
+                    <li class="nav-item "><a href="#" class="nav-link text-dark">Đăng nhập</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link text-dark" id="btnDK">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row ">
+            <h3 class="mx-auto">DANH SÁCH THAM GIA ĐỘI ROBOCON KHOA CNTT</h3>
+            <table class="table-bordered  table-hover table" id="tbDanhSach">
+                <tr class="font-weight-bold">
+                    <th>STT</th>
+                    <th>Mã thành viên</th>
+                    <th>Họ tên</th>
+                    <th>Lớp</th>
+                    <th>Ngày tham gia</th>
+                    <th>Điện thoại</th>
+                    <th>Email</th>
+                </tr>
+                <tr class="font-weight-bold">
+                    <td>1</td>
+                    <td>K16-123456789</td>
+                    <td>Tran Thanh Kha</td>
+                    <td>DHKTPM16ATT</td>
+                    <td>22/02/2022</td>
+                    <td>0909-123-123</td>
+                    <td>thanhkha@iuh.edu.vn</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="modal fade " id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>THÔNG TIN CÁ NHÂN</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="form-control" id="form">
+                                <div class="row form-group p-1">
+                                    <div class="col-3 ">
+                                        <label for="">Mã thành viên:</label>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <input type="text" class="form-control" id="txtMa" placeholder="K16-123456789">
+                                    </div>
+                                    <div class="col-3  p-2">
+                                        <span class="mauDo" id="tbMa">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group p-1">
+
+                                    <div class="col-3 ">
+                                        <label for="">Họ tên:</label>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <input type="text" class="form-control" id="txtHt" placeholder="Họ tên : Tran Anh Dung">
+                                    </div>
+                                    <div class="col-3  p-2">
+                                        <span class="mauDo" id="tbTen">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group p-1">
+                                    <div class="col-3 ">
+                                        <label for="">Lớp:</label>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <input type="text" class="form-control" id="txtLop" placeholder="Lop: DHKTPM16ATT">
+                                    </div>
+                                    <div class="col-3  p-2">
+                                        <span class="mauDo" id="tbLop">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group p-1">
+                                    <div class="col-3 ">
+                                        <label for="">Ngày tham gia:</label>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <input type="date" class="form-control" id="txtDate" placeholder="mm/dd/yyyy">
+                                    </div>
+                                    <div class="col-3  p-2">
+                                        <span class="mauDo" id="tbDate">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group p-1">
+
+                                    <div class="col-3 ">
+                                        <label for="">Số điện thoại:</label>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <input type="text" class="form-control" id="txtDt" placeholder="SDT: 0xxxx-xxx-xxx">
+                                    </div>
+                                    <div class="col-3  p-2">
+                                        <span class="mauDo" id="tbDt">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group p-1">
+                                    <div class="col-3 ">
+                                        <label for="">Email:</label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="txtDc" placeholder="Email:xxxxxx@iuh.edu.vn">
+                                    </div>
+                                    <div class="col-3  p-2">
+                                        <span class="mauDo" id="tbDc">*</span>
+                                    </div>
+                                </div>
+                                <div class="row p-1">
+                                    <div class=" COL-12 col-sm-12"><input type="button" value="Lưu" id="btnSave" class="btn btn-success btn-block"></div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-4 col-md-4">
+                <h6> SVTH:Le Phuoc Hung</h6>
+            </div>
+            <div class="col-4 col-md-4">
+                <h6> Mã số sinh viên:22685661</h6>
+            </div>
+            <div class="col-4 col-md-4">
+                <h6> Lớp:DHTMDT18C</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

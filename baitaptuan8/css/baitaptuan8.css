@@ -1,0 +1,13 @@
+.mauDo {
+    font-size: 100%;
+    color: red;
+}
+
+[class="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+li {
+    width: 150px;
+}
