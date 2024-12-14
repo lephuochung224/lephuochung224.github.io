@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+    --text-color: #000;
+    --hover-color: rgb(24, 122, 9);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    width: 100%;
+}
+
+
+/* Header */
+
+.logo {
+    border-radius: 1000px;
+    height: 100px;
+}
+
+.main .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 4px #ccc;
+    height: 10vh;
+    position: fixed;
+    background-color: rgb(177, 241, 177);
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo a {
+    font-size: 40px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 200px;
+    transition: all .2s;
+}
+
+.header .logo a:hover {
+    color: var(--hover-color);
+}
+
+.header .nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.header .nav ul li {
+    margin: 0 10px;
+}
+
+.header .nav ul li a {
+    padding: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.header .nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+.header .icons {
+    display: flex;
+    margin-right: 200px;
+    height: 10vh;
+    align-items: center;
+}
+
+.icons .search {
+    position: relative;
+}
+
+.icons .search input {
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.icons .search i {
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 30px;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.icons .search i:hover {
+    color: var(--hover-color);
+}
+
+.icons .user {
+    margin-left: 6px;
+}
+
+.icons .user i {
+    padding: 10px;
+    color: #000;
+}
+
+.icons .shopping-cart i {
+    padding: 6px;
+    margin-left: 14px;
+    transition: all .2s;
+}
+
+.icons .shopping-cart i:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+
+/* Content */
+
+.content {
+    margin-top: 14vh;
+}
+
+.content .login {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.login .head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login .head h2 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.login .head h2:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.login .form-login {
+    width: 100%;
+    text-align: center;
+}
+
+.login .form-login .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.login .form-login .media i {
+    padding: 6px;
+    margin: 0 6px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px #ccc;
+    font-size: 20px;
+    transition: all .2s;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.login .form-login .media i:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login .form-login p {
+    margin-top: 20px;
+}
+
+.login .form-login input {
+    width: 90%;
+    margin: 10px 0;
+    height: 34px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.login .form-login input:focus {
+    border-bottom: 1px solid var(--hover-color);
+    box-shadow: 0 0 5px var(--hover-color);
+    outline: none;
+}
+
+.login .form-login .support div input[type="text"]:focus,
+.login .form-login .support div input[type="password"]:focus {
+    outline: none;
+}
+
+.login .form-login .error-username,
+.login .form-login .error-password {
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login .form-login .support {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+}
+
+.login .form-login .support div {
+    display: flex;
+    align-items: center;
+    width: 62%;
+}
+
+.login .form-login .support div input[type="checkbox"] {
+    transform: scale(0.34);
+    width: 18%;
+    cursor: pointer;
+}
+
+.login .form-login .support div span {
+    font-size: 14px;
+}
+
+.login .form-login .support .forget-password {
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .1s;
+    margin-right: 4px;
+}
+
+.login .form-login .support .forget-password:hover {
+    opacity: .6;
+}
+
+.login .form-login .btn {
+    background-color: var(--hover-color);
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all .2s;
+    width: 34%;
+    margin-top: 20px;
+}
+
+.login .form-login .btn:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.login .form-register {
+    width: 100%;
+    text-align: center;
+}
+
+.login .form-register .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .form-register .media i {
+    padding: 6px;
+    margin: 10px 6px 0;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px var(--text-color);
+    font-size: 20px;
+    transition: all .2s;
+    box-shadow: 0 0 4px var(--text-color);
+}
+
+.login .form-register .media i:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login .form-register p {
+    margin-bottom: 10px;
+}
+
+.login .form-register input {
+    width: 90%;
+    margin: 10px 0;
+    height: 34px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.login .form-register input:focus {
+    border-bottom: 1px solid var(--hover-color);
+    box-shadow: 0 0 5px var(--hover-color);
+    outline: none;
+}
+
+.login .form-register .support div input[type="text"]:focus,
+.login .form-register .support div input[type="password"]:focus {
+    outline: none;
+}
+
+.login .form-register .error-name,
+.login .form-register .error-email,
+.login .form-register .error-tel,
+.login .form-register .error-password {
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login .form-register .support {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+}
+
+.login .form-register .support div {
+    display: flex;
+    align-items: center;
+    width: 62%;
+}
+
+.login .form-register .support div input[type="checkbox"] {
+    transform: scale(0.34);
+    width: 18%;
+    cursor: pointer;
+}
+
+.login .form-register .support div span {
+    font-size: 14px;
+}
+
+.login .form-register .support .forget-password {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .1s;
+    margin-right: 4px;
+}
+
+.login .form-register .support .forget-password:hover {
+    color: var(--hover-color);
+}
+
+.login .form-register .btn {
+    background-color: var(--hover-color);
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all .2s;
+    width: 34%;
+    margin-top: 20px;
+}
+
+.login .form-register .btn:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.login .form-register {
+    width: 100%;
+    text-align: center;
+}
+
+.login .form-register .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.login .form-register .media i {
+    padding: 6px;
+    margin: 0 6px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px var(--text-color);
+    font-size: 20px;
+    transition: all .2s;
+    box-shadow: 0 0 4px var(--text-color);
+}
+
+.login .form-register .media i:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login .form-register p {
+    margin-top: 20px;
+}
+
+.login .form-register input {
+    width: 90%;
+    margin: 10px 0;
+    height: 34px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.login .form-register .error-register-username,
+.login .form-register .error-register-password,
+.login .form-register .error-repassword {
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login .form-register input:focus {
+    border-bottom: 1px solid var(--hover-color);
+    box-shadow: 0 0 5px var(--hover-color);
+    outline: none;
+}
+
+.login .form-register .support div input[type="text"]:focus,
+.login .form-register .support div input[type="password"]:focus {
+    outline: none;
+}
+
+.login .form-register .btn {
+    background-color: var(--hover-color);
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all .2s;
+    width: 34%;
+    margin-top: 10px;
+    border: none;
+}
+
+.login .form-register .btn:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+.qc {
+    cursor: pointer;
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 110%;
+    background-color: #ccc;
+    margin-top: 34px;
+}
+
+.footer .contain {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.contain .information {
+    width: 20%;
+    padding: 20px;
+}
+
+.contain .information h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #272727;
+    margin-bottom: 20px;
+}
+
+.contain .information ul {
+    list-style: none;
+}
+
+.contain .information ul li {
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.contain .information ul a {
+    text-decoration: none;
+    color: #272727;
+    padding: 2px;
+    transition: all .2s;
+}
+
+.contain .information ul a:hover {
+    color: rgb(0, 149, 255);
+}
+
+.contain .information:first-child ul a span {
+    margin-left: 6px;
+}
+
+.contain .information ul a:hover span {
+    padding: 10px;
+}
+
+.footer .map {
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .map .contact {
+    margin-left: 20px;
+}
+
+.footer .map .contact p {
+    font-weight: 600;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #000;
+}
+
+.footer .copyright p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer .copyright p span {
+    font-weight: 700;
+}

@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+    --text-color: #000;
+    --hover-color: rgb(24, 122, 9);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
+}
+
+.main {
+    width: 100%;
+}
+
+
+/* Header */
+
+.logo {
+    border-radius: 1000px;
+    height: 100px;
+}
+
+.main .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 4px #ccc;
+    height: 10vh;
+    position: fixed;
+    background-color: rgb(177, 241, 177);
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo a {
+    font-size: 40px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 200px;
+    transition: all .2s;
+}
+
+.header .logo a:hover {
+    color: var(--hover-color);
+}
+
+.header .nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.header .nav ul li {
+    margin: 0 10px;
+
+}
+
+.header .nav ul li a {
+    padding: 10px;
+    color:rgb(1, 78, 0);
+    text-decoration: none;
+    transition: all .2s;
+   
+}
+
+.header .nav ul li a:hover {
+    color:#eeff00;
+}
+
+.header .icons {
+    display: flex;
+    margin-right: 200px;
+    height: 10vh;
+    align-items: center;
+}
+
+.icons .search {
+    position: relative;
+   
+}
+
+.icons .search input {
+    padding: 8px 18px;
+    font-size: 14px;
+  
+    outline: none;
+    border: none;
+    background-color: #f1f1f1;
+    
+    
+}
+
+.icons .search i {
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 8px 18px;
+    font-size: 14px;
+   
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.icons .search i:hover {
+    color: var(--hover-color);
+}
+
+.icons .user {
+    margin-left: 6px;
+}
+
+.icons .user i {
+    padding: 10px;
+    color: #000;
+}
+
+.icons .cart {
+    position: relative;
+}
+
+.icons .cart:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.icons .cart i {
+    padding: 6px;
+    margin-left: 14px;
+    transition: all .2s;
+}
+
+.icons .cart .quantity {
+    background-color: #FCCD04;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 0 6px;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    cursor: pointer;
+    color: #000;
+}
+
+.icons .shopping-cart {
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background: #fff;
+    top: 0;
+    left: 100%;
+    transition: left .6s ease;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.icons .shopping-cart.active {
+    left: calc(100% - 350px);
+    box-shadow: -1px 3px 2px 2px #ccc;
+}
+
+.shopping-cart .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-cart .head p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.shopping-cart .head .close-shopping-cart {
+    font-size: 18px;
+    padding: 5px;
+    margin: 0;
+}
+
+.shopping-cart .head .close-shopping-cart:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.shopping-cart .list-cart {
+    width: 100%;
+    list-style: none;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.shopping-cart .list-cart .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.shopping-cart .list-cart .item:hover {
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.shopping-cart .list-cart .item:hover .information .product-name {
+    color: var(--hover-color);
+}
+
+.list-cart .item img {
+    width: 30%;
+}
+
+.list-cart .item .product {
+    width: 70%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-cart .item .product .information p {
+    margin: 0;
+}
+
+.list-cart .item .product .information .decrease {
+    margin-bottom: 10px;
+    color: red;
+}
+
+.list-cart .item .product .information .product-name {
+    margin-bottom: 2px;
+    color: #272727;
+    font-size: 14px;
+}
+
+.list-cart .item .product .information .price {
+    margin-bottom: 10px;
+    color: red;
+}
+
+.list-cart .item .adjust {
+    margin-left: 110px;
+}
+
+.list-cart .item .adjust .product-quantity {
+    font-weight: 600;
+}
+
+.list-cart .item .adjust .subtraction {
+    background-color: #FCCD04;
+    padding: 0 6px;
+    min-width: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.list-cart .item .adjust .add-product {
+    background-color: #FCCD04;
+    padding: 0 5px;
+    min-width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .2s;
+}
+
+.list-cart .item .adjust .subtraction:hover,
+.list-cart .item .adjust .add-product:hover {
+    opacity: .78;
+}
+
+.shopping-cart .checkout {
+    position: absolute;
+    font-size: 18px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+}
+
+.shopping-cart .checkout .total {
+    text-align: center;
+    margin-bottom: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.shopping-cart .checkout .payment {
+    text-align: center;
+    background-color: var(--hover-color);
+    padding: 5px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+.shopping-cart .checkout .payment:hover {
+    color: #fff;
+    opacity: .9;
+    cursor: pointer;
+}
+
+
+/* Content */
+
+.content {
+    width: 100%;
+    height: 67vh;
+}
+
+.content .banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10vh;
+}
+
+.content .banner .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+}
+
+.content .banner .prev {
+    position: absolute;
+    z-index: 10;
+    font-size: 24px;
+    margin-left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 14px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    transition: all .2s;
+}
+
+.content .banner .prev:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.content .banner .next {
+    position: absolute;
+    z-index: 10;
+    font-size: 24px;
+    top: 50%;
+    right: 0;
+    margin-right: 20px;
+    transform: translateY(-50%);
+    padding: 10px 14px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    transition: all .2s;
+}
+
+.content .banner .next:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.content .advantage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content .advantage .advantage-img {
+    
+    border-top: none;
+    padding: 10px;
+    width: 20%;
+    margin: 0 20px;
+}
+
+.content .advantage .advantage-img img {
+    width: 100%;
+}
+
+.content .advantage .advantage-img h2 {
+    font-size: 20px;
+    margin: 6px 0;
+    font-weight:bold;
+    text-align: center;
+    color:var(--hover-color);
+}
+
+.content .advantage .advantage-img p {
+    font-size: 16px;
+    color: #454545;
+}
+
+.container .col-3 {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.container .row h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.container .image-container {
+    overflow: hidden;
+}
+
+.container .product {
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container .product:hover {
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.container .product span {
+    position: absolute;
+    width: 26%;
+    height: 6%;
+    background: #ffc107;
+    text-align: center;
+}
+
+.container .product .promotion {
+    background-color: red;
+    color: #fff;
+}
+
+.container .product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container .product .name {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.container .product .price {
+    font-weight: bold;
+}
+
+.container .product p.decoration {
+    text-decoration: line-through;
+}
+
+.container .product .decrease {
+    color: red;
+    font-weight: 600;
+}
+
+.container .product .add {
+    background: rgb(149 255 133);
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 8px;
+    transition: all .2s;
+}
+
+.container .product .add:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+
+
+/* Footer */
+
+.qc {
+    cursor: pointer;
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    background-color: #ccc;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer .contain {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.contain .information {
+    width: 20%;
+    padding: 20px;
+}
+
+.contain .information h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #272727;
+    margin-bottom: 20px;
+}
+
+.contain .information ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contain .information ul li {
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.contain .information ul a {
+    text-decoration: none;
+    color: #272727;
+    padding: 2px;
+    transition: all .2s;
+}
+
+.contain .information ul a:hover {
+    color: rgb(0, 149, 255);
+}
+
+.contain .information:first-child ul a span {
+    margin-left: 6px;
+}
+
+.contain .information ul a:hover span {
+    padding: 10px;
+}
+
+.footer .map {
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .map .contact {
+    margin-left: 20px;
+}
+
+.footer .map .contact p {
+    font-weight: 600;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #000;
+}
+
+.footer .copyright p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer .copyright p span {
+    font-weight: 700;
+}
+
+.modal-body .payments {
+    margin: 18px 0 10px;
+}
+
+.modal-body .error-namepayment,
+.modal-body .error-tel,
+.modal-body .error-email {
+    color: red;
+    font-size: 14px;
+    padding: 4px 10px 0;
+}
+
+.modal-footer .btnCloseModal,
+.modal-footer .btnConfirmPayment {
+    background: var(--hover-color);
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: all .2s;
+    border: none;
+    margin: 4px 8px;
+    font-size: 16px;
+}
+
+.modal-footer .btnCloseModal:hover,
+.modal-footer .btnConfirmPayment:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+    opacity: .9;
+}
